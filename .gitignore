@@ -1,0 +1,62 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.pyd
+
+# Django
+db.sqlite3
+*.log
+*.pot
+*.pyc
+*.so
+*.pyo
+*.pyd
+staticfiles/
+media/
+**/migrations/*.py
+**/migrations/*.pyc
+
+# Environment variables
+.env
+*.env
+
+# Virtual Environments
+venv/
+env/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Logs
+*.log
+*.out
+*.err
+
+# Byte-compiled files
+*.py[cod]
+*$py.class
+
+# Test coverage
+htmlcov/
+.coverage
+.tox/
+.cache/
+coverage.xml
+*.cover
+
+# Deployment files
+*.pem
+*.key
+*.crt
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.idea/
+*.swp
+*.swo
+*.bak
