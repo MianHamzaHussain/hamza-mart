@@ -1,0 +1,820 @@
+{
+	"info": {
+		"_postman_id": "d69f0aff-ab0a-4f07-ba9e-7045c38cca7e",
+		"name": "Hamza Mart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15808314"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "admin allowed user routes",
+					"item": [
+						{
+							"name": "Users List",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Mian Hamza Update\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}users/",
+									"host": [
+										"{{baseURL}}users"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User  By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}users/3",
+									"host": [
+										"{{baseURL}}users"
+									],
+									"path": [
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Mian Hamza Update\",\n    \"email\": \"mian2@gmail.com\",\n    \"isAdmin\":false\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}users/update/2/",
+									"host": [
+										"{{baseURL}}users"
+									],
+									"path": [
+										"update",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Mian Hamza Update\",\n    \"email\": \"mian2@gmail.com\",\n    \"isAdmin\":false\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}users/delete/3/",
+									"host": [
+										"{{baseURL}}users"
+									],
+									"path": [
+										"delete",
+										"3",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"mian@gmail.com\",\n    \"password\":12345678\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}users/login/",
+							"host": [
+								"{{baseURL}}users"
+							],
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"mian Hamza\",\n    \"email\":\"mian2@gmail.com\",\n    \"password\":\"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}users/register/",
+							"host": [
+								"{{baseURL}}users"
+							],
+							"path": [
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"mian Hamza\",\n    \"email\":\"mian@gmail.com\",\n    \"password\":\"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}users/profile/update/",
+							"host": [
+								"{{baseURL}}users"
+							],
+							"path": [
+								"profile",
+								"update",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}users/profile/",
+							"host": [
+								"{{baseURL}}users"
+							],
+							"path": [
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "admin allowed product routes",
+					"item": [
+						{
+							"name": "Create Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Amazon Echo Dot 3rd Generation",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "29.99",
+											"type": "text"
+										},
+										{
+											"key": "brand",
+											"value": "Amazon",
+											"type": "text"
+										},
+										{
+											"key": "countInStock",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "Electronics",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "eet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/mianhamza/Documents/Projects/learning django /proshop_django-master/static/images/alexa.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseURL}}products/create/",
+									"host": [
+										"{{baseURL}}products"
+									],
+									"path": [
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Cannon EOS 80D DSLR Camera",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "929.99",
+											"type": "text"
+										},
+										{
+											"key": "brand",
+											"value": "Cannon",
+											"type": "text"
+										},
+										{
+											"key": "countInStock",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "Electronics",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Introducing the iPhone 11 Pro. A transformative triple-camera system that adds tons of capability without complexity. An unprecedented leap in battery life",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "Its optional add file to upload",
+											"type": "file",
+											"src": "/Users/mianhamza/Documents/Projects/learning django /proshop_django-master/static/images/camera.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseURL}}products/update/2/",
+									"host": [
+										"{{baseURL}}products"
+									],
+									"path": [
+										"update",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Cannon EOS 80D DSLR Camera",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "929.99",
+											"type": "text"
+										},
+										{
+											"key": "brand",
+											"value": "Cannon",
+											"type": "text"
+										},
+										{
+											"key": "countInStock",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "Electronics",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Introducing the iPhone 11 Pro. A transformative triple-camera system that adds tons of capability without complexity. An unprecedented leap in battery life",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "Its optional add file to upload",
+											"type": "file",
+											"src": "/Users/mianhamza/Documents/Projects/learning django /proshop_django-master/static/images/camera.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseURL}}products/delete/4/",
+									"host": [
+										"{{baseURL}}products"
+									],
+									"path": [
+										"delete",
+										"4",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Products List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}products?page=1",
+							"host": [
+								"{{baseURL}}products"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "airpods",
+									"description": "Search name of product",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Page you want to fetch"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top 5 Products on review base",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}products/top/",
+							"host": [
+								"{{baseURL}}products"
+							],
+							"path": [
+								"top",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}products/1/",
+							"host": [
+								"{{baseURL}}products"
+							],
+							"path": [
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rating\": 4,\n    \"comment\": \"This product is excellent! However, I would recommend some improvements in the packaging. It would be great if the product comes with a more durable box for delivery, and maybe some color variations could be added. Overall, I am satisfied with the purchase, but there are a few minor things to improve.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}products/1/reviews/",
+							"host": [
+								"{{baseURL}}products"
+							],
+							"path": [
+								"1",
+								"reviews",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "admin allowed orders routes",
+					"item": [
+						{
+							"name": "List Orders",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}orders",
+									"host": [
+										"{{baseURL}}orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Delivery Status",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}orders/1/",
+									"host": [
+										"{{baseURL}}orders"
+									],
+									"path": [
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"orderItems\": [\n    {\n      \"product\": 1,\n      \"qty\": 2,\n      \"price\": 89.99\n    },\n    {\n      \"product\": 2,\n      \"qty\": 1,\n      \"price\": 929.99\n    }\n  ],\n  \"paymentMethod\": \"PayPal\",\n  \"taxPrice\": 95.98,\n  \"shippingPrice\": 10.0,\n  \"totalPrice\": 1215.95,\n  \"shippingAddress\": {\n    \"address\": \"123 Main St\",\n    \"city\": \"New York\",\n    \"postalCode\": \"10001\",\n    \"country\": \"USA\"\n  }\n}\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}orders/add/",
+							"host": [
+								"{{baseURL}}orders"
+							],
+							"path": [
+								"add",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My Orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}orders/myorders/",
+							"host": [
+								"{{baseURL}}orders"
+							],
+							"path": [
+								"myorders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}orders/1",
+							"host": [
+								"{{baseURL}}orders"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Make Order Payment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}orders/1/pay/",
+							"host": [
+								"{{baseURL}}orders"
+							],
+							"path": [
+								"1",
+								"pay",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
