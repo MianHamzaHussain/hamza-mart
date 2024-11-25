@@ -46,17 +46,34 @@ pip install -r requirements/requirements.txt
 cp backend/settings/.env.template backend/settings/.env
 ```
 #### 2. Open the .env file and update the values as needed. At a minimum, you should update the following:
-SECRET_KEY: Generate a new secret key for your Django project. You can generate one [here](https://djecrety.ir/)
-DEBUG: Set it to True for development and False for production.
-DB_ENGINE, POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD, DB_HOST, and DB_PORT to connect to your local or remote database.
+-   SECRET_KEY: Generate a new secret key for your Django project. You can generate one [here](https://djecrety.ir/)
+-   DEBUG: Set it to True for development and False for production.
+-   DB_ENGINE, POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD, DB_HOST, and DB_PORT to connect to your local or remote database.
 
-### 6. Run Migrations
+### 7. Run Migrations
 ```bash 
 python manage.y makemigrations
 python manage.py migrate
 ```
 
-### 7.  Start the Development Server
+### 8. Using the Default SQLite Database
+The project includes a pre-configured SQLite database (db.sqlite3) with the following users:
+- Admin User (Superuser)
+    - Email: mian@gmail.com
+    - Password: 12345678
+- Normal User
+    - Email: mian2@gmail.com
+    - Password: 12345678
+
+### 9. Using a Custom Database (PostgreSQL or Remote)
+If you are using a custom database, follow these additional steps:
+- Run migrations (as shown above in step 7) to set up the schema.
+- Create a superuser:
+```bash
+python manage.py createsuperuser
+```
+
+### 10.  Start the Development Server
 ```bash
 python manage.py runserver
 ```

@@ -22,7 +22,7 @@ from django.conf import settings
 from django.http import JsonResponse
 
 def server_running(request):
-    return JsonResponse({"message": f"Server is running on port {settings.PORT}"})
+    return JsonResponse({"message": "Server is running on port 8000"})
 
 urlpatterns = [
     path('admin/', admin.site.urls),
