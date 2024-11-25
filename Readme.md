@@ -78,3 +78,39 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 The server will be available at  [Dev Sever](http://127.0.0.1:8000/)
+
+
+## Import API Documentation and Environment in Postman
+To use the API documentation in Postman, follow these steps:
+### 1. Import the API Collection:
+- Open Postman.
+- Click the Import button in the top-left corner.
+- Navigate to the postman/ folder in the repository.
+- Select the collection.json file.
+- Click Import
+- The collection will be imported with the name Hamza Mart
+
+### 2. Import the Environment Variables:
+- In Postman, go to the Environments tab in the sidebar.
+- Click the Import button.
+- Navigate to the postman/ folder in the repository.
+- Select the environment.json file.
+- Click Import
+- The environment will be imported with name  localHamzaMart
+
+### 3. Update Environment Variables:
+- Open the imported environment (localHamzaMart) in Postman:
+- Go to Environments and select localHamzaMart.
+- Update the following variables as needed:
+- baseURL: Ensure it points to your backend URL, e.g., http://127.0.0.1:8000/api/ 
+- token: Replace the placeholder JWT token with a valid token from your backend
+- Click Save to apply the changes.
+
+### 4. Verify the Setup
+- Ensure the imported collection (Hamza Mart) is visible in the Collections tab.
+- Confirm the localHamzaMart environment is selected in the top-right environment dropdown.
+
+### 5. Test the API Endpoints
+- Open the imported collection (Hamza Mart) in the Collections tab.
+- Select an endpoint and click Send.
+- Confirm that the response is as expected.
